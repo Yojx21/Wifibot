@@ -13,10 +13,15 @@ class MainWindow : public QMainWindow
 
 public:
     explicit MainWindow(QWidget *parent = 0);
+    quint16 crc16(QByteArray buffer);
     ~MainWindow();
 
 private slots:
     void on_Connex_Button_clicked();
+
+    void on_Av_Button_clicked();
+
+    void on_Deco_button_clicked();
 
 private:
     Ui::MainWindow *ui;

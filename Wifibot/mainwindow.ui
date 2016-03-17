@@ -118,22 +118,6 @@
     <property name="title">
      <string>Video</string>
     </property>
-    <widget class="QGraphicsView" name="graphicsView">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>20</y>
-       <width>401</width>
-       <height>251</height>
-      </rect>
-     </property>
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Ignored" vsizetype="Expanding">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-    </widget>
     <widget class="QCheckBox" name="Cam_enable">
      <property name="enabled">
       <bool>true</bool>
@@ -151,6 +135,21 @@
      </property>
      <property name="checked">
       <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QWebView" name="webView">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>391</width>
+       <height>251</height>
+      </rect>
+     </property>
+     <property name="url">
+      <url>
+       <string>about:blank</string>
+      </url>
      </property>
     </widget>
    </widget>
@@ -214,7 +213,17 @@
       <item row="0" column="3">
        <widget class="QLineEdit" name="PORT_text">
         <property name="text">
-         <string>15030</string>
+         <string>15020</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QPushButton" name="Deco_button">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Déconnecter</string>
         </property>
        </widget>
       </item>
@@ -225,6 +234,7 @@
      <zorder>Connex_Button</zorder>
      <zorder>IP_text</zorder>
      <zorder>PORT_text</zorder>
+     <zorder>Deco_button</zorder>
     </widget>
    </widget>
    <widget class="QGroupBox" name="groupBox_4">
@@ -270,6 +280,13 @@
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QWebView</class>
+   <extends>QWidget</extends>
+   <header>QtWebKitWidgets/QWebView</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
